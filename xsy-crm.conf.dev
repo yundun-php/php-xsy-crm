@@ -1,0 +1,37 @@
+[normal]
+base_api_url_rest_v1 = 'https://api-tencent.xiaoshouyi.com/data/v1/'
+base_api_url_rest_v2_0 = 'https://api-tencent.xiaoshouyi.com/rest/data/v2.0/'
+base_api_url_rest_v2 = 'https://api-tencent.xiaoshouyi.com/rest/data/v2/'
+ua = 'yundun xsy sdk'
+cache_driver = 'memcached'
+;cache_driver = 'redis'
+sdk_log_switch = true
+sdk_log = '/tmp/xsy-crm.log'
+
+
+[xsy_token_conf]
+grant_type = 'password'
+client_id = 'xx'
+client_secret = xx
+redirect_uri = 'http://www.yundun.com'
+username = 'xx'
+;密码+令牌
+password = 'xx'
+
+[xsy]
+token_url = 'https://api-tencent.xiaoshouyi.com/oauth2/token'
+token_ttl = 3600
+token_mem_key = 'xsy-token'
+
+[memcache_xsy-crm]
+MEMCACHE_HOST = 127.0.0.1
+MEMCACHE_PORT = 11211
+MEMCACHE_WEIGHT = 0
+
+[redis_xsy_crm]
+db       = 1
+timeout  = 3
+cmdlog   = off
+password = ''
+address  = 127.0.0.1:6379
+
